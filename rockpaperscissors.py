@@ -1,3 +1,5 @@
+""" Resource: https://pythonstacks.blogspot.com/2020/03/make-rock-paper-and-scissors-game-with.html """
+
 import random 
 
 # Print multiline instruction 
