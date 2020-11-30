@@ -30,7 +30,7 @@ print the passing students names (not inside the function of A, after it is used
 def return_dictlist(thisdictlist, threshold):
     for value in thisdictlist:
         if value['grade'] >= threshold:
-            print(f"{value['name']} - {value['grade']}")
+            print(f"{value['name']} passed with score {value['grade']}")
         
 
 return_dictlist([{'name': 'Mary', 'grade': 4}, {'name': 'Sissi', 'grade': 19}, {'name': 'Frank', 'grade': 14}], 15)
@@ -38,12 +38,3 @@ return_dictlist([{'name': 'Mary', 'grade': 4}, {'name': 'Sissi', 'grade': 19}, {
 return_dictlist([{'name': 'Mary', 'grade': 4}, {'name': 'Sissi', 'grade': 19}, {'name': 'Frank', 'grade': 14}], 20)
 
 return_dictlist([{'name': 'Mary', 'grade': 4}, {'name': 'Sissi', 'grade': 19}, {'name': 'Frank', 'grade': 14}], 5)
-
-
-
-# Output:
-# Mary - 4
-# Sissi - 19
-
-# What does 'key' need to be in this for loop if we are not directly using it
-# Receive error: "TypeError: tuple indices must be integers or slices, not str"
