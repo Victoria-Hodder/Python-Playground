@@ -19,22 +19,31 @@ A. Given a list with dictionaries of the form [{'name': 'Mary', 'grade': 4},
 a list of dictionaries with the student that have grade more than the number.
 
 
-1. Learn to print key, value pairs from dictionaries
-2. print list of dicts
-3. threshold number
+1. print list of dicts
+2. hwo to access grade key
 
 B. On top of the A solution. Use that function to get the passing students. Then 
 print the passing students names (not inside the function of A, after it is used).
 
 """
 
-def return_dictlist(thisdictlist):
-    for key, value in enumerate(thisdictlist):
-        print(f"{value['name']} - {value['grade']}")
+def return_dictlist(thisdictlist, threshold):
+    for value in thisdictlist:
+        if value['grade'] >= threshold:
+            print(f"{value['name']} - {value['grade']}")
+        
+
+return_dictlist([{'name': 'Mary', 'grade': 4}, {'name': 'Sissi', 'grade': 19}, {'name': 'Frank', 'grade': 14}], 15)
+
+return_dictlist([{'name': 'Mary', 'grade': 4}, {'name': 'Sissi', 'grade': 19}, {'name': 'Frank', 'grade': 14}], 20)
+
+return_dictlist([{'name': 'Mary', 'grade': 4}, {'name': 'Sissi', 'grade': 19}, {'name': 'Frank', 'grade': 14}], 5)
 
 
-return_dictlist([{'name': 'Mary', 'grade': 4}, {'name': 'Sissi', 'grade': 19}])
 
 # Output:
-# Mary : 4
-# Sissi : 19
+# Mary - 4
+# Sissi - 19
+
+# What does 'key' need to be in this for loop if we are not directly using it
+# Receive error: "TypeError: tuple indices must be integers or slices, not str"
