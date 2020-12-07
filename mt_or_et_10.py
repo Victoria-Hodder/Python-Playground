@@ -8,8 +8,7 @@ def return_greater(numbers, threshold):
         if num >= threshold:
             print(num)
 
-# return_greater([1, 2, 3, 10, 11, 4, 18], 15)
-# print()
+return_greater([1, 2, 3, 10, 11, 4, 18], 15)
 # return_greater([52, 2, 13, 60, 11, 48, 8], 50)
 
 
@@ -23,13 +22,13 @@ def passing_grades(grades, threshold):
             passing.append(grade)
     return passing
 
-print(passing_grades([52, 2, 13, 60, 11, 48, 8], 50))
+# print(passing_grades([52, 2, 13, 60, 11, 48, 8], 50))
 
 # with list comprehension
 def passing_scores(scores, threshold):
-     return [g for g in grades if g > threshold]
+     return [s for s in scores if s > threshold]
 
-print(passing_scores([52, 2, 13, 60, 11, 48, 8], 50))
+# print(passing_scores([52, 2, 13, 60, 11, 48, 8], 50))
 
 
 """
