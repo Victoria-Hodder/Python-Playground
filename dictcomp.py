@@ -1,0 +1,50 @@
+numbers = range(10)
+new_dict_for = {}
+
+"""Add values to `new_dict` using for loop"""
+for n in numbers:
+    if n%2==0:
+        new_dict_for[n] = n**3
+
+print(new_dict_for)
+
+new_dict_comp = {n:n**2 for n in numbers if n%2 == 0}
+
+print(new_dict_comp)
+
+
+""" Converting fahrenheit into celsius """
+
+fahrenheit = {'t1':-30, 't2':-20, 't3':-10, 't4':0}
+
+# Using lambda function to convert celsius to fahrenheit
+# Using round to limit float digits
+celsius = list(map(lambda x: round((float(5)/9)*(x-32)), fahrenheit.values()))
+
+#Create the `celsius` dictionary
+celsius_dict = dict(zip(fahrenheit.keys(), celsius))
+
+print(celsius_dict)
+
+# The same but as a dict comprehension
+celsius_dict_comp = {k:round((float(5)/9)*(v-32)) for (k,v) in fahrenheit.items()}
+
+print(celsius_dict_comp)
+
+"""Dict comprehension with conditional"""
+
+dict1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+
+# Check for items greater than 2 and modulus 2
+dict1_cond = {k:v for (k,v) in dict1.items() if v>2 if v%2==0}
+
+print(dict1_cond)
+
+""" if else """
+
+dict2 = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f':6}
+
+# Identify odd and even entries
+dict2_tripleCond = {k:('even' if v%2==0 else 'odd') for (k,v) in dict2.items()}
+
+print(dict2_tripleCond)
