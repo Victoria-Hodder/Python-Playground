@@ -49,6 +49,16 @@ dict2_tripleCond = {k:('even' if v%2==0 else 'odd') for (k,v) in dict2.items()}
 
 print(dict2_tripleCond)
 
+
+""" Writing my own dict comprehension """
+
+my_dict = {'Lola': 23, 'Mary': 34, 'Sissi': 45}
+
+my_dict_cond = {k:v for (k,v) in my_dict.items() if v>2 if v%2==0}
+
+print(my_dict_cond)
+
+
 """
 Source:
 https://www.datacamp.com/community/tutorials/python-dictionary-comprehension?utm_source=adwords_ppc&utm_campaignid=898687156&utm_adgroupid=48947256715&utm_device=m&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=229765585186&utm_targetid=aud-763347114660:dsa-473406574715&utm_loc_interest_ms=&utm_loc_physical_ms=9061132&gclid=Cj0KCQiAzZL-BRDnARIsAPCJs724VDgvfY4DuG9sbkGKilmH2ArA_pyrGh0i9l7lqIIhd6Ah8JpzvGAaAtIJEALw_wcB#pdc
